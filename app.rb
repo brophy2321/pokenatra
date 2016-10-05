@@ -9,12 +9,18 @@ require_relative 'models/pokemon'
 
 get '/pokemons' do
     @pokemons = Pokemon.all
-    erb :"pokemon/index"
+    erb :'pokemons/index'
 end
-get '/' do
-  redirect 'pokemons'
+
+get 'pokemons/new' do
+erb :'pokemons/new'
 end
+
 get '/pokemons/:id' do
   @pokemons = Pokemon.find(params[:id])
   erb :'pokemons/show'
+end
+
+get '/' do
+  redirect 'pokemons'
 end

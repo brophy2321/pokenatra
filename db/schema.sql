@@ -1,10 +1,10 @@
-DROP TABLE IF EXISTS songs;
-DROP TABLE IF EXISTS artists;
+DROP TABLE IF EXISTS pokemons;
 
-CREATE TABLE artists (
+
+CREATE TABLE pokemons (
   id SERIAL PRIMARY KEY,
   name VARCHAR,
   poke_type VARCHAR,
-  cp VARCHAR
+  cp INT,
   img_url VARCHAR
 );

@@ -14,3 +14,7 @@ end
 get '/' do
   redirect 'pokemons'
 end
+get '/pokemons/:id' do
+  @pokemons = Pokemon.find(params[:id])
+  erb :'pokemons/show'
+end

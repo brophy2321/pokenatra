@@ -1,6 +1,7 @@
 <h3> Edit Pokemon </h3>
 <form action= "/pokemons" method="post">
-<input type = "hidden" name="_method" value="put">
+<input type="hidden" name="_method" value="put">
+
   <label>Name</label>
   <input type = "text" name="pokemon[name]" >
 
@@ -10,4 +11,9 @@
   <label>Pokemon CP</label>
   <input type = "text" name="pokemon[cp]" >
   <input type="submit" value= "Edit Pokemon">
+</form>
+
+<form action="/pokemons/<%= @pokemons.id %>"
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete">
 </form>

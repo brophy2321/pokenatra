@@ -29,6 +29,11 @@ get 'pokemons/:id/edit' do
   @pokemons = Pokemon.find(params[:id])
   erb :'pokemons/edit'
 end
+post '/pokemons/:id' do
+  @pokemons = Pokemon.find(params[:id])
+  @pokemons.update(params[:pokemon])
+  redirect ('/pokemons/' + @pokemon.id.to_s)
+end
 
 get '/' do
   redirect 'pokemons'
